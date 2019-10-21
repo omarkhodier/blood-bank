@@ -1,0 +1,67 @@
+@media(max-width:767px){
+    .login
+    {
+        padding: 10px 0;
+        border-bottom: 1px solid #e0e0e0;
+        margin-bottom: 10px;
+    }
+    .login,
+    .phone
+    {
+        text-align: center !important
+    }
+    
+    .shop-drop
+    {
+        right: 0 !important;
+        min-width:300px !important;
+    }
+    .navbar-default .navbar-collapse
+    {
+        overflow: visible
+    }
+    .master-slider .ms-caption a
+    {
+        margin-top: 5px
+    }
+    .cart-info span
+    {
+        float: none;
+        
+    }
+    
+    .master-slider .ms-caption {
+        left: 300px;
+        right: 300px;
+        top: 100px;
+        text-align: center;
+    }
+    .master-slider .ms-caption h2
+    {
+        font-size: 18px
+    }
+    .pay-way
+    {
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 22px;
+        margin-bottom: 15px;
+    }
+    .sslinks p
+    {
+        margin-left: 0
+    }
+    .sslinks
+    {
+      text-align:  center !important;
+        margin: 0
+    }
+    
+    .right,
+    .hlool 
+    {
+         text-align:  center !important;
+        margin: 15px
+    }
+    
+}

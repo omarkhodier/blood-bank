@@ -1,0 +1,128 @@
+doctype html
+html(lang='ar')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    // The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
+    title Health Bank | Employee
+    // Bootstrap
+    // Bootstrap
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    // <link rel="stylesheet" href="css/bootstrap-rtl.min.css" />
+    link(rel='stylesheet', href='/inc/nav/css/bootstrap-dropdownhover.min.css')
+    // animation css
+    link(rel='stylesheet', href='/css/animate.min.css')
+    link(rel='stylesheet', href='/inc/tab/css/zozo.examples.min.css')
+    link(rel='stylesheet', href='/inc/tab/css/zozo.tabs.flat.min.css')
+    link(rel='stylesheet', href='/inc/tab/css/zozo.tabs.min.css')
+    // owl-carsoul
+    link(rel='stylesheet', href='/inc/carousel/owl.carousel.css')
+    link(rel='stylesheet', href='/inc/carousel/owl.theme.css')
+    link(rel='stylesheet', href='/inc/carousel/owl.transitions.css')
+    // font-awsem
+    link(rel='stylesheet', href='/inc/icons/css/font-awesome.min.css')
+    // master slider
+    link(rel='stylesheet', href='/inc/fj/font.css')
+    link(rel='stylesheet', href='/js/masterslider/style/masterslider.css')
+    link(rel='stylesheet', href='/js/masterslider/skins/default/style.css')
+    link(rel='stylesheet', href='/inc/hancen/stylesheet.css')
+    link(rel='stylesheet', href='/css/style.css')
+    link(rel='stylesheet', href='/css/small.css')
+    // HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
+    // WARNING: Respond.js doesn't work if you view the page via file://
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+      script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+  body
+    .heder
+      .container
+        .row
+          .col-md-3
+            .logo-d
+              a(href='/')
+                img(src='/img/logo.png', alt='logo')
+          .col-md-9
+            .links-nv
+              ul.list-unstyaled.list-inline
+                li
+                  img(src='/img/user.png', alt='')
+                li
+                  p welcome #{userName} 
+                li your last visit was in #{currentDate}
+                li
+                  a(href='/users/logout')
+                    i.fa.fa-sign-out
+                    |  sign out
+    section.search-box
+      .container
+        .row
+          .dont.col-md-2
+            h2 Search By : 
+          .db.col-md-10
+            form(method='POST' action="/users/employee")
+              br
+              .form-group(id="date-foundation")
+                  label date of donation
+                  input.form-control(type='date', placeholder='date of donation',name='date',id='date-foundation-input')
+              .form-group(id="amount-blood")
+                  label amount of blood
+                  input.form-control(type='text', placeholder='amount of blood',name='amount',id='amount-blood-input')
+              .form-group
+                select.form-control(name='type',id='search-type')
+                  option(value="")  Select One...
+                  option(name='bloodType' value="bloodType") Blood Type
+                  option(name='Idoption' value="Id") ID
+                  //- option ID
+              .form-group(id='user_blood')
+                label Blood Type :
+                select.form-control(name='blood' value="")
+                  option(value='') Select One...
+                  option(value='o+') O+
+                  option(value='o-') O-
+                  option(value='a+') A+
+                  option(value='a-') A-
+                  option(value='b+') B+
+                  option(value='b-') B-
+                  option(value='ab+') AB+
+                  option(value='ab-') AB-
+              .form-group(id='user_Id')
+                 input.form-control(type='text', placeholder='ID(14 numbers only)' name='Id')
+            
+              button.btn.btn-primary(type='submit') Search
+            table(class="table table-stripped")
+              thead
+                th Id
+                th BloodType
+                th name
+                th address
+                th phone  
+                th actions
+              tbody
+                if records
+                  each record,i in records
+                    tr
+                      td #{record.Id}
+                      td #{record.blood}
+                      td #{record.name}
+                      td #{record.address}
+                      td #{record.phone}
+                      td
+                       button(type="button",class="btn btn-warning", id="Add-data-by-emp" style='margin:2px') ADD Data
+                       a(href="javascript:;" ,id="save-new" ,data-user-id=record.Id ,class="btn btn-success") Save Data  
+    footer
+      .container.text-center
+        p All Rights Reserved To Health Bank Project 2019 ©
+    // jQuery (necessary for Bootstrap's JavaScript plugins)
+    script(src='/js/jquery-1.12.2.min.js')
+    // Include all compiled plugins (below), or include individual files as needed
+    script(src='/js/bootstrap.min.js')
+    script(src='/js/parallax.min.js')
+    script(src='/js/wow.min.js')
+    script(src='/inc/nav/js/bootstrap-dropdownhover.min.js')
+    script(src='/inc/tab/js/zozo.tabs.min.js')
+    script(src='/inc/carousel/owl.carousel.min.js')
+    // master slider
+    script(src='/js/masterslider/masterslider.min.js')
+    script(src='/js/masterslider/jquery.easing.min.js')
+    script(src='/js/custom.js')

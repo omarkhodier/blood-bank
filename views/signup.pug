@@ -1,0 +1,105 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  // The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
+  title Health Bank | Sign Up
+  // Bootstrap
+  // Bootstrap
+  link(rel='stylesheet' href='/css/bootstrap.min.css')
+  // <link rel="stylesheet" href="css/bootstrap-rtl.min.css" />
+  link(rel='stylesheet' href='/inc/nav/css/bootstrap-dropdownhover.min.css')
+  // animation css
+  link(rel='stylesheet' href='/css/animate.min.css')
+  link(rel='stylesheet' href='/inc/tab/css/zozo.examples.min.css')
+  link(rel='stylesheet' href='/inc/tab/css/zozo.tabs.flat.min.css')
+  link(rel='stylesheet' href='/inc/tab/css/zozo.tabs.min.css')
+  // owl-carsoul
+  link(rel='stylesheet' href='/inc/carousel/owl.carousel.css')
+  link(rel='stylesheet' href='/inc/carousel/owl.theme.css')
+  link(rel='stylesheet' href='/inc/carousel/owl.transitions.css')
+  // font-awsem
+  link(rel='stylesheet' href='/inc/icons/css/font-awesome.min.css')
+  // master slider
+  link(rel='stylesheet' href='/inc/fj/font.css')
+  link(rel='stylesheet' href='/js/masterslider/style/masterslider.css')
+  link(rel='stylesheet' href='/js/masterslider/skins/default/style.css')
+  link(rel='stylesheet' href='/inc/hancen/stylesheet.css')
+  link(rel='stylesheet' href='/css/style.css')
+  link(rel='stylesheet' href='/css/small.css')
+  // HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
+  // WARNING: Respond.js doesn't work if you view the page via file://
+  //if lt IE 9
+    script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+    script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+.heder
+  .container
+    .row
+      .col-md-3
+        .logo-d
+          a(href='/')
+            img(src='/img/logo.png' alt='logo')
+.container
+  center
+    h2 Sign up form
+    if errors
+      each error,i in errors
+        div(class='alert alert-danger') #{error.msg}
+    br
+  form(method='post' action="users/signup")
+    .form-group
+      select.form-control.input-lg(name='work')
+        option(value='selecto') Select Your Type...
+        option(value='Physician') Physician
+        option(value='Employee') Employee
+        option(value='Student') Student
+    .form-group
+      label(for='Id') ID:
+      input#id.form-control(type='text' placeholder='14 numbers only' name='Id')
+    .form-group
+      label(for='name') Name:
+      input#name.form-control(type='text' name='name' placeholder='type your name')
+    .form-group
+      label(for='address') Address:
+      input#address.form-control(type='text' name='address'  placeholder='type your address')
+    .form-group
+      label(for='age') Age:
+      input#age.form-control(type='number' name='age'  placeholder='type your age')
+    .form-group
+      label(for='faculty') Faculty:
+      input#faculty.form-control(type='text' name='faculty' placeholder='type your faculty')
+    .form-group
+      label(for='facID') Faculty ID:
+      input#name.form-control(type='text' name='facID'  placeholder='type your facID')
+    .form-group
+      label(for='grade') Grade:
+      input#grade.form-control(type='text' name='grade'  placeholder='type your grade')
+    .form-group
+      label(for='phone') phone:
+      input#phone.form-control(type='text' name='phone'  placeholder='type your number')
+    .form-group
+      label(for='password') Password:
+      input#password.form-control(type='password' placeholder='At least 8 characters' name='password')
+    .form-group
+      label(for='cpassword') Confirm password:
+      input#cpassword.form-control(type='password' placeholder='At least 8 characters' name='password2')
+    br
+    center
+      button.btn.btn-primary(style='height:35px;width:200px' type='submit') Register
+footer
+  .container.text-center
+    p All Rights Reserved To Health Bank Project 2019 &copy;
+// jQuery (necessary for Bootstrap's JavaScript plugins)
+script(src='/js/jquery-1.12.2.min.js')
+// Include all compiled plugins (below), or include individual files as needed
+script(src='/js/bootstrap.min.js')
+script(src='/js/parallax.min.js')
+script(src='/js/wow.min.js')
+script(src='/inc/nav/js/bootstrap-dropdownhover.min.js')
+script(src='/inc/tab/js/zozo.tabs.min.js')
+script(src='/inc/carousel/owl.carousel.min.js')
+// master slider
+script(src='/js/masterslider/masterslider.min.js')
+script(src='/js/masterslider/jquery.easing.min.js')
+script(src='/js/custom.js')

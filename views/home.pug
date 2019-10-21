@@ -1,0 +1,186 @@
+doctype html
+html(lang='ar')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    // The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
+    title Health Bank | Home
+    // Bootstrap
+    // Bootstrap
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    // <link rel="stylesheet" href="css/bootstrap-rtl.min.css" />
+    link(rel='stylesheet', href='inc/nav/css/bootstrap-dropdownhover.min.css')
+    // animation css
+    link(rel='stylesheet', href='css/animate.min.css')
+    link(rel='stylesheet', href='inc/tab/css/zozo.examples.min.css')
+    link(rel='stylesheet', href='inc/tab/css/zozo.tabs.flat.min.css')
+    link(rel='stylesheet', href='inc/tab/css/zozo.tabs.min.css')
+    // owl-carsoul
+    link(rel='stylesheet', href='inc/carousel/owl.carousel.css')
+    link(rel='stylesheet', href='inc/carousel/owl.theme.css')
+    link(rel='stylesheet', href='inc/carousel/owl.transitions.css')
+    // font-awsem
+    link(rel='stylesheet', href='inc/icons/css/font-awesome.min.css')
+    // master slider
+    link(rel='stylesheet', href='inc/fj/font.css')
+    link(rel='stylesheet', href='js/masterslider/style/masterslider.css')
+    link(rel='stylesheet', href='js/masterslider/skins/default/style.css')
+    link(rel='stylesheet', href='inc/hancen/stylesheet.css')
+    link(rel='stylesheet', href='css/style.css')
+    link(rel='stylesheet', href='css/small.css')
+    // HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
+    // WARNING: Respond.js doesn't work if you view the page via file://
+    //
+      if lt IE 9
+      script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+      script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+  body.home-body(data-spy='scroll', data-target='.navbar', data-offset='100')
+    section#home.slider
+      #masterslider.master-slider.ms-skin-default
+        // new slide
+        .ms-slide
+          // slide background
+          img(src='js/masterslider/blank.gif', data-src='img/slider2.jpg', alt='lorem ipsum dolor sit')
+        // end of slide
+        // new slide
+        .ms-slide
+          // slide background
+          img(src='js/masterslider/blank.gif', data-src='img/slider.jpg', alt='lorem ipsum dolor sit')
+        // end of slide
+        // new slide
+        .ms-slide
+          // slide background
+          img(src='js/masterslider/blank.gif', data-src='img/slider1.jpg', alt='lorem ipsum dolor sit')
+        // end of slide
+    nav.navbar.navbar-inverse.navbar-fixed-top
+      .container
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#myNavbar')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='/')
+            img(src='/img/logo.png', alt='logo')
+        div
+          #myNavbar.collapse.navbar-collapse
+            ul.nav.navbar-nav
+              li.active
+                a.dd(href='#home') Home
+              li
+                a.dd(href='#about') About Us
+              li
+                a.dd(href='#midical') Medical Record
+              li
+                a.dd(href='#blood') Blood Bank 
+              li
+                a.dd(href='#contact') Contact Us
+            ul.nav.navbar-nav.navbar-right
+              li
+                a(href='/signup', method='GET') Sign Up
+              li
+                a(href='/login', method='GET') Login
+    section#about.aboutus
+      .container
+        .row
+          .col-md-7.col-md-offset-3
+            h3 About Us
+            p
+              | We developed this website to computrize the univeristy medical exmination procees into medical records for students which we thought this will make the exmanition easier for doctors and more helpful for the students if they want to extract any licences in any place which require medical exmination, On the other side the blood bank can contact with the students personally through the student information which provide phone number and address for every single student if there is any blood type missing or suffering from disability.
+    section#midical.midical
+      .container
+        .row
+          .col-md-6.wow.fadeInLeft(data-wow-deuration='.2s', data-wow-delay='.3s')
+            .med-text
+              h2 Medical Record
+              p
+                | medical record have medical history which will be identified through specialized doctors after examination With attention to the identification of blood type for the future blood donation.
+                br
+                |  also it includes personal information, such as name, phone number, adress etc... 
+                br
+                br
+                br
+          .mid-img.wow.fadeInLeft(data-wow-deuration='.2s', data-wow-delay='.3s')
+            img(src='img/56.png', alt='img')
+    section#blood.midical
+      .container
+        .row
+          .mid-img.wow.fadeInLeft(data-wow-deuration='.2s', data-wow-delay='.3s')
+            img(src='img/57.png', alt='img')
+          .col-md-6.col-md-offset-6.wow.fadeInLeft(data-wow-deuration='.2s', data-wow-delay='.3s')
+            .med-text
+              h2 Blood Bank
+              p
+                | Now the blood bank can provide blood bags or Immediate emergency donation easily by contacting the stuents who they have required blood type.
+                br
+                |  for the students who did not spend their six months after donation, the system will reject them as donators before specific time, anyway after that the system will bring them back as avaliable donators.
+                br
+                |  every single donation counts!! how?!
+                br
+                |  every student will save his donation as one blood bag for every single donation process and he can ask for it at any time, the system calls this process as bonus.
+    section#contact.contact
+      .container
+        .slinks.text-center
+          ul.list-unstayled.list-inline
+            li
+              a(href='#')
+                i.fa.fa-facebook
+            li
+              a(href='#')
+                i.fa.fa-twitter
+            li
+              a(href='#')
+                i.fa.fa-linkedin
+            li
+              a(href='#')
+                i.fa.fa-youtube
+            li
+              a(href='#')
+                i.fa.fa-google
+        .col-md-6
+          br
+          br
+          br
+          .med-text
+            h2 Team Members
+            ul.list-unstayled
+              li Moustafa Alnaggar
+              li Ahmed khalil
+              li Mahmoud Magdy
+              li  Mohammed Abdo
+              li Moustafa Alwakil
+              li Asmaa Hagras
+              li Omar Khodier
+              li Mariam Ahmed
+        .row
+          .col-md-6
+            form(method='post')
+              h3 leave a Message to us
+              .form-group
+                input.form-control(type='text', name='txtName', placeholder='Your Name *', value='')
+              .form-group
+                input.form-control(type='text', name='txtEmail', placeholder='Your Email *', value='')
+              .form-group
+                input.form-control(type='text', name='txtPhone', placeholder='Your Phone Number *', value='')
+              .form-group
+                input.form-control(type='text', name='txtPhone', placeholder='subject *', value='')
+              .form-group
+                textarea.form-control(name='txtMsg', placeholder='Your Message *', style='width: 100%; height: 150px;')
+              .form-group
+                input.btn.btn-primary(type='submit', name='btnSubmit', value='Send Message')
+    footer
+      .container.text-center
+        p All Rights Reserved To Health Bank Project 2019 ©
+    // jQuery (necessary for Bootstrap's JavaScript plugins)
+    script(src='js/jquery-1.12.2.min.js')
+    // Include all compiled plugins (below), or include individual files as needed
+    script(src='js/bootstrap.min.js')
+    script(src='js/parallax.min.js')
+    script(src='js/wow.min.js')
+    script(src='inc/nav/js/bootstrap-dropdownhover.min.js')
+    script(src='inc/tab/js/zozo.tabs.min.js')
+    script(src='inc/carousel/owl.carousel.min.js')
+    // master slider
+    script(src='js/masterslider/masterslider.min.js')
+    script(src='js/masterslider/jquery.easing.min.js')
+    script(src='js/custom.js')
